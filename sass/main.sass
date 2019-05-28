@@ -1,0 +1,205 @@
+* 
+	box-sizing: border-box
+
+body
+	font-family: 'Roboto', sans-serif
+	margin: 0
+	padding: 0
+
+a
+	text-decoration: none
+	color: #fff
+	border: 1px solid #fff
+	border-radius: 14px
+	padding: 15px 15px
+	display: inline-block
+	text-align: center
+	width: 210px
+	margin-top: 50px
+
+button
+	display: block
+	background: url('../img/burger.svg')
+	width: 33px
+	height: 33px
+	border: none
+	background-color: transparent
+	cursor: pointer
+	margin-bottom: 60px
+
+
+
+button, textarea, input, a
+	font-size: 17px
+	outline: none
+
+h2
+	font-size: 46px
+
+h3
+	font-size: 42px
+
+h4
+	font-size: 40px
+
+h2, h3, h4
+	font-weight: 300
+	margin-top: 0
+	letter-spacing: 1px
+	span
+		font-weight: 900
+
+.span
+	display: block
+
+p
+	font-size: 16px
+	line-height: 1.8
+	margin-bottom: 0
+
+.grid
+	display: grid
+	grid-template-areas: 'a a a a a a b b b' 'c c c c d d d d d' 'c c c c e e e e e' 'f f f g g g g g g'
+	&-item
+		padding: 55px
+		padding-bottom: 65px
+		&:nth-child(1)
+			grid-area: a
+		&:nth-child(2)
+			grid-area: b
+		&:nth-child(3)
+			grid-area: c
+		&:nth-child(4)
+			grid-area: d
+		&:nth-child(5)
+			grid-area: e
+		&:nth-child(6)
+			grid-area: f
+		&:nth-child(7)
+			grid-area: g
+		&-bg
+			background: url('../img/first_bg.jpg') center no-repeat
+			background-size: cover
+			padding: 0
+		&-grey
+			background-color: #f1f1f1
+		&-blue
+			background: url('../img/secong_bg.jpg') center no-repeat
+			background-size: cover
+			& > div
+				margin-bottom: 50px
+			color: #fff
+		&-light
+			background: url('../img/third_bg.jpg') center no-repeat
+			background-size: cover
+			a
+				color: #111
+				border: 1px solid #111
+		&-black
+			background: url('../img/fourth_bg.jpg') center no-repeat
+			background-size: cover
+			color: #fff
+		&-man
+			background: url('../img/fifth_bg.jpg') center no-repeat
+			background-size: cover
+			color: #fff
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			min-height: 700px
+		&-form
+			background: url('../img/sixth_bg.jpg') center no-repeat
+			background-size: cover
+			color: #fff
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			min-height: 700px
+.form
+	max-width: 620px
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	textarea
+		width: 100%
+		min-height: 124px
+	textarea, input
+		background-color: transparent
+		border: 1px solid #fff
+		border-radius: 14px
+		margin-bottom: 15px
+		padding: 10px 15px
+		font-size: 18px
+		color: #fff
+		&::placeholder
+			color: #fff
+	input
+		width: 48%
+
+.socials 
+	list-style-type: none
+	display: flex
+	padding: 0
+	margin: 0
+	&_fb
+		background: url('../img/Facebook.png') center no-repeat
+	&_tw
+		background: url('../img/Twitter.png') center no-repeat
+	&_dr
+		background: url('../img/Dribbble.png') center no-repeat
+	li
+		margin-right: 10px
+		&:last-child
+			margin-right: 0
+		a
+			width: 45px
+			height: 45px
+			border-radius: 7px
+			display: block
+			border: none
+
+.logo
+	display: block
+	width: 90px
+	height: 90px
+	margin-bottom: 25px
+	background: url('../img/logotype.png') center no-repeat
+
+
+@media (max-width: 991.98px)
+	.grid-item
+		padding: 40px
+		&-blue
+			& > div:last-child
+				margin-bottom: 20px
+		&-man
+			min-height: inherit
+		&-form
+			min-height: inherit
+	h2, h3, h4
+		margin-bottom: 20px
+		font-size: 28px
+	p
+		font-size: 13px
+		line-height: 20px
+	button
+		margin-bottom: 50px
+	a
+		margin-top: 30px
+
+@media (max-width: 767.98px)
+	.grid
+		grid-template-areas: 'a' 'b' 'c' 'd' 'e' 'f' 'g'
+		&-item
+			text-align: center
+			&-bg
+				min-height: 320px
+			&-form
+				text-align: left
+			&-grey
+				text-align: left
+	.logo
+		margin: 25px auto 10px
+	.form
+		input, textarea
+			font-size: 12px
